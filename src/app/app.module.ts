@@ -9,6 +9,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
+import { HttpClientModule } from '@angular/common/http';
+import { InfoPaginaService } from './services/info-pagina.service';
 
 
 @NgModule({
@@ -22,9 +24,10 @@ import { ItemComponent } from './pages/item/item.component';
   ],
   imports: [
     BrowserModule,
-    AppRouting
+    AppRouting,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [InfoPaginaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
